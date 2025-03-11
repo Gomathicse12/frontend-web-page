@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hexa</title>
+    <style>
+       button:hover{  cursor:pointer}
+       
+    button{
+            padding: 25px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(121, 64, 168);
+            margin-top: 15%;
+            font-size: large;
+        }
+        #wrap{
+            background-color: brown;
+            height: 800PX;
+        }
+        
+        h1{
+            display: inline;
+            font-family: 20px;
+            font-style: italic;
+        }
+       span{
+        margin-left: 60%;
+       }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>ColourFlipper</h1>
+       <span id="herf">#ffffff</span>
+    </div><hr>
+
+    <div id="wrap">
+   <center>   <button onclick="changeme()">change me</button></center>
+    </div>
+    <script>
+        var wrap =   document.getElementById("wrap")
+        var hex = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+        var span = document.getElementById('herf')
+        
+        function randomnumber(){
+           var rn = Math.floor (Math.random()*15)
+            return rn;
+        }
+        function changeme(){
+
+           var code ='#'
+           for(i=0; i<6;i++){
+            code+=hex[randomnumber()]
+           }
+           wrap.style.backgroundColor = code;
+           span.innerHTML = code
+
+        }
+        
+    </script>
+</body>
+</html>

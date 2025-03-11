@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doc</title>
+</head>
+<body>
+   <h1 id="header">
+        welcome
+          </h1>
+          
+             <button onclick="rename()">change</button>
+             <input type="text" id="num1" value="20">
+             <input type="text" id="num2" value="30">
+
+             <button id="click" onclick="CalcAdd()">add</button>
+              <P>Result:</P><p id="add">total</p>
+
+              <button onclick="rename()">change</button>
+              <input type="text" id="num1" value="20">
+              <input type="text" id="num2" value="30">
+
+              <button id="click" onclick="Calcsub()">sub</button>
+              <P>Result:</P><p id="sub">total</p>
+
+              <button onclick="rename()">change</button>
+              <input type="text" id="num1" value="20">
+              <input type="text" id="num2" value="30">
+
+              <button id="click" onclick="Calcmul()">mul</button>
+              <P>Result:</P><p id="mul">total</p>
+
+              <button onclick="rename()">change</button>
+              <input type="text" id="num1" value="20">
+              <input type="text" id="num2" value="0">
+
+              <button id="click" onclick="Calcdiv()">div</button>
+              <P>Result:</P><p id="div">total</p>
+          <script>
+              var n1= document.getElementById("num1")
+              var n2= document.getElementById("num2")
+              console.log(n1.value)
+              console.log(n2.value)
+              
+          function CalcAdd(){
+                var total = Number (n1.value) + Number (n2.value)
+                console.log (total)
+                var para=document.getElementById("add")
+                para.innerHTML=total;
+          }
+          function Calcsub(){
+                var total = Number (n1.value) - Number (n2.value)
+                console.log (total)
+                var para=document.getElementById("sub")
+                para.innerHTML=total;
+          }
+          function Calcmul(){
+                var total = Number (n1.value) * Number (n2.value)
+                console.log (total)
+                var para=document.getElementById("mul")
+                para.innerHTML=total;
+          }
+          function Calcdiv(){
+                var total = Number (n1.value) / Number (n2.value)
+                console.log (total)
+                var para=document.getElementById("div")
+                para.innerHTML=total;
+          }
+         
+          </script>
+  
+</body>
+</html>

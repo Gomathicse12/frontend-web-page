@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <h1>polindrom</h1>
+      <input type="text" id="txt" placeholder="write">
+      <button onclick="check()">click</button>
+      <p>result</p>
+      <p id="result"></p>
+
+      <script>
+        console.log("hello")
+         
+         function check(){
+            var word=document.getElementById("txt").value
+            console.log(word)
+         var arr= word.split("")
+         var rev=arr.reverse()
+         var joo=rev.join("")
+
+         if(joo==word){
+             document.getElementById("result").innerHTML="polindrom"
+
+         }else{
+         document.getElementById("result").innerHTML="Notpolindrom"
+        }
+    }
+      </script>
+    
+</body>
+</html>
